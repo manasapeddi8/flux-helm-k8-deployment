@@ -1,0 +1,14 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: fluxapp
+  namespace: default
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  releaseName: fluxapp
+  targetNamespace: fluxapp
+  chart:
+    git: git@github.com:manasapeddi8/flux-helm-k8-deployment.git
+	path: myfirstwebsite/
+	ref: master
